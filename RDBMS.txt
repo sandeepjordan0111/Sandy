@@ -1,0 +1,72 @@
+Commands
+	DDL: Create,Alter,truncate,Drop
+	DML: Insert,Update,Delete,Select	
+	TCL : Commit,Rollback
+	DCL :
+
+*Names given to columns or Objects are case insensitive
+
+.A referential integrity constraint can be done using foreign key
+.Data Dictionary is called as metadata
+
+*VARCHAR2 is used unless we know the fixed size of characters  (Dynamic length)
+Varchar --> Static length
+
+*Composite primary key is created as table level constraint
+
+*Only primary key or unique key columns in parent table is used as foreign key in child table
+
+*data in foreign key can be duplicated and also can be null in some cases
+
+*ALTER : ADD(CONSTRAINT),DROP,MODIFY,RENAME,
+
+*Primary and unique key columns cannot be removed
+
+*Constraint name start as SYS_C if we dont mention any constraint name
+
+*DISABLING CONSTRIANT
+
+*(DDL)RENAME TABLENAME TO NEWTABLE NAME;
+
+*After every DML command we use a COMMIT statement
+
+*DDL are auto-commited
+*NuLL is the default value.
+
+
+CREATE SEQUENCE sequence_name
+START WITH initial_value
+INCREMENT BY increment_value
+MINVALUE minimum value
+MAXVALUE maximum value
+CYCLE|NOCYCLE ;
+
+sequence_name: Name of the sequence.
+
+initial_value: starting value from where the sequence starts. 
+Initial_value should be greater than or equal 
+to minimum value and less than equal to maximum value.
+
+increment_value: Value by which sequence will increment itself. 
+Increment_value can be positive or negative.
+
+minimum_value: Minimum value of the sequence.
+maximum_value: Maximum value of the sequence.
+
+cycle: When sequence reaches its set_limit 
+it starts from beginning.
+
+nocycle: An exception will be thrown 
+if sequence exceeds its max_value.
+
+nocache: number of values of the sequence the database preallocates 
+By default 20 sequences are created
+
+CURRVAL: returns the current value of the sequence.
+NEXTVAL : increments and returns the new value
+
+EX: SELECT Firstseq.CURRVAL from DUAL;  (DUAL IS SUMMY TABLE)
+
+VALUES ->>>values
+
+SET-->> UPDATE
